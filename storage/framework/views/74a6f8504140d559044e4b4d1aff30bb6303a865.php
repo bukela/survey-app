@@ -45,9 +45,9 @@
                 <div class="col-md-7">
                     <?php if(surveys_for_delete($patient->id)): ?>
                         <p class="gray__paragraph">Patiënt <?php echo e(++$key); ?></p>
-                        <?php else: ?>
+                    <?php else: ?>
                         <p class="green__paragraph">Patiënt <?php echo e(++$key); ?></p>
-                        <?php endif; ?>
+                    <?php endif; ?>
                 </div>
                 <div class="col-md-5">
                     <div class="col-md-6 col-md-offset-0 col-sm-4 col-sm-offset-4 col-xs-11 col-xs-offset-1 enquete__text">
