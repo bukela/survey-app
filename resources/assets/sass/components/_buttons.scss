@@ -1,0 +1,74 @@
+.button__purple {
+    cursor: pointer;
+    border: solid 0px transparent;
+    padding: 16px 32px;
+    border-radius: 25px;
+    color: #FFFFFF;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    background: #4285F4 radial-gradient( circle at 0px 0px, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 0%) no-repeat;
+    transition: all .2s;
+    @include font1;
+    font-weight: 700;
+    line-height: 16px;
+    margin: 16px;
+    background-color: $purple-button;
+    outline: none;
+    display: inline-block;
+    span {
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    }
+    &:hover,
+    &:visited {
+        color: white;
+    }
+}
+
+.button__green {
+    cursor: pointer;
+    border: solid 0px transparent;
+    padding: 16px 32px;
+    border-radius: 25px;
+    color: #FFFFFF;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    background: #4285F4 radial-gradient( circle at 0px 0px, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 0%) no-repeat;
+    transition: all .2s;
+    @include font1;
+    font-weight: 700;
+    line-height: 16px;
+    margin: 16px;
+    background-color: $green-button;
+    outline: none;
+    display: inline-block;
+    span {
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    }
+    &:hover,
+    &:visited {
+        color: white;
+    }
+}
+
+.button__red {
+    cursor: pointer;
+    border: solid 0px transparent;
+    padding: 16px 32px;
+    border-radius: 25px;
+    color: #FFFFFF;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    background: #4285F4 radial-gradient( circle at 0px 0px, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 0%) no-repeat;
+    transition: all .2s;
+    @include font1;
+    font-weight: 700;
+    line-height: 16px;
+    margin: 16px;
+    background-color: #d33030;
+    outline: none;
+    display: inline-block;
+    span {
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    }
+    &:hover,
+    &:visited {
+        color: white;
+    }
+}

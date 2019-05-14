@@ -1,0 +1,30 @@
+/* ----- HEADER ------------------------------------------------------------- */
+
+header {
+    background-color: $purple-color;
+    .header__logo {
+        padding: 17px 0 17px 36px;
+        display: inline-block;
+    }
+    .logout {
+        margin: 21px 32px 0 0;
+        float: right;
+        color: white;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        text-shadow: 1px 0 0 $purple-color, 2px 0 0 $purple-color, 3px 0 0 $purple-color, -1px 0 0 $purple-color, -2px 0 0 $purple-color, -3px 0 0 $purple-color;
+        z-index: 1;
+        &:after {
+            content: "";
+            background: white;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            bottom: .210em;
+            left: 0;
+            z-index: -1;
+        }
+    }
+}
+

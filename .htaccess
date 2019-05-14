@@ -1,0 +1,7 @@
+# RewriteEngine on
+# RewriteCond %{HTTP_HOST} ^convatec.medicaldigitals.com
+# RewriteRule ^(.*)$ http://medicaldigitals.com/convatec/public/$1 [L,NC,QSA]
+
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^public
+RewriteRule ^(.*)$ public/$1 [L]

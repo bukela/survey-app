@@ -1,0 +1,270 @@
+#cbx,
+.hidden-xs-up {
+    visibility: hidden;
+    position: absolute;
+}
+
+.cbx {
+    position: relative;
+    top: 1px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #979797;
+    border-radius: 5px;
+    vertical-align: middle;
+    transition: background 0.1s ease;
+    cursor: pointer;
+    transition: border 0.6s ease-in-out;
+}
+
+.cbx:hover {
+    border: 2px solid $purple-color;
+}
+
+.cbx:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 8px;
+    width: 5px;
+    height: 11px;
+    opacity: 0;
+    transform: rotate(45deg) scale(0);
+    -ms-transform: rotate(45deg) scale(0);
+    -webkit-transform: rotate(45deg) scale(0);
+    -moz-transform: rotate(45deg) scale(0);
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transition: all 0.3s ease;
+    transition-delay: 0.15s;
+}
+
+.lbl {
+    margin-left: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 0px;
+    color: #898989;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+.register__four .lbl {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 20px;
+}
+
+.register__four .cntr {
+    margin-bottom: 50px;
+}
+
+
+#cbx:checked~.cbx,
+.hidden-xs-up:checked~.cbx {
+    border-color: transparent;
+    background: $purple-color;
+    animation: jelly 0.6s ease-in-out;
+}
+
+#cbx:checked~.cbx:after,
+.hidden-xs-up:checked~.cbx:after {
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    -moz-transform: rotate(45deg) scale(1);
+}
+
+.cntr {
+    padding: 10px;
+    display: flex;
+}
+
+.cntr label {
+    margin-bottom: 0;
+}
+
+@-moz-keyframes jelly {
+    from {
+        transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+    }
+    30% {
+        transform: scale(1.25, 0.75);
+        -ms-transform: scale(1.25, 0.75);
+        -webkit-transform: scale(1.25, 0.75);
+        -moz-transform: scale(1.25, 0.75);
+    }
+    40% {
+        transform: scale(0.75, 1.25);
+        -ms-transform: scale(0.75, 1.25);
+        -webkit-transform: scale(0.75, 1.25);
+        -moz-transform: scale(0.75, 1.25);
+    }
+    50% {
+        transform: scale(1.15, 0.85);
+        -ms-transform: scale(1.15, 0.85);
+        -webkit-transform: scale(1.15, 0.85);
+        -moz-transform: scale(1.15, 0.85);
+    }
+    65% {
+        transform: scale(0.95, 1.05);
+        -ms-transform: scale(0.95, 1.05);
+        -webkit-transform: scale(0.95, 1.05);
+        -moz-transform: scale(0.95, 1.05);
+    }
+    75% {
+        transform: scale(1.05, 0.95);
+        -ms-transform: scale(1.05, 0.95);
+        -webkit-transform: scale(1.05, 0.95);
+        -moz-transform: scale(1.05, 0.95);
+    }
+    to {
+        transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+    }
+}
+
+@-webkit-keyframes jelly {
+    from {
+        transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+    }
+    30% {
+        transform: scale(1.25, 0.75);
+        -ms-transform: scale(1.25, 0.75);
+        -webkit-transform: scale(1.25, 0.75);
+        -moz-transform: scale(1.25, 0.75);
+    }
+    40% {
+        transform: scale(0.75, 1.25);
+        -ms-transform: scale(0.75, 1.25);
+        -webkit-transform: scale(0.75, 1.25);
+        -moz-transform: scale(0.75, 1.25);
+    }
+    50% {
+        transform: scale(1.15, 0.85);
+        -ms-transform: scale(1.15, 0.85);
+        -webkit-transform: scale(1.15, 0.85);
+        -moz-transform: scale(1.15, 0.85);
+    }
+    65% {
+        transform: scale(0.95, 1.05);
+        -ms-transform: scale(0.95, 1.05);
+        -webkit-transform: scale(0.95, 1.05);
+        -moz-transform: scale(0.95, 1.05);
+    }
+    75% {
+        transform: scale(1.05, 0.95);
+        -ms-transform: scale(1.05, 0.95);
+        -webkit-transform: scale(1.05, 0.95);
+        -moz-transform: scale(1.05, 0.95);
+    }
+    to {
+        transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+    }
+}
+
+@-o-keyframes jelly {
+    from {
+        transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+    }
+    30% {
+        transform: scale(1.25, 0.75);
+        -ms-transform: scale(1.25, 0.75);
+        -webkit-transform: scale(1.25, 0.75);
+        -moz-transform: scale(1.25, 0.75);
+    }
+    40% {
+        transform: scale(0.75, 1.25);
+        -ms-transform: scale(0.75, 1.25);
+        -webkit-transform: scale(0.75, 1.25);
+        -moz-transform: scale(0.75, 1.25);
+    }
+    50% {
+        transform: scale(1.15, 0.85);
+        -ms-transform: scale(1.15, 0.85);
+        -webkit-transform: scale(1.15, 0.85);
+        -moz-transform: scale(1.15, 0.85);
+    }
+    65% {
+        transform: scale(0.95, 1.05);
+        -ms-transform: scale(0.95, 1.05);
+        -webkit-transform: scale(0.95, 1.05);
+        -moz-transform: scale(0.95, 1.05);
+    }
+    75% {
+        transform: scale(1.05, 0.95);
+        -ms-transform: scale(1.05, 0.95);
+        -webkit-transform: scale(1.05, 0.95);
+        -moz-transform: scale(1.05, 0.95);
+    }
+    to {
+        transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+    }
+}
+
+@keyframes jelly {
+    from {
+        transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+    }
+    30% {
+        transform: scale(1.25, 0.75);
+        -ms-transform: scale(1.25, 0.75);
+        -webkit-transform: scale(1.25, 0.75);
+        -moz-transform: scale(1.25, 0.75);
+    }
+    40% {
+        transform: scale(0.75, 1.25);
+        -ms-transform: scale(0.75, 1.25);
+        -webkit-transform: scale(0.75, 1.25);
+        -moz-transform: scale(0.75, 1.25);
+    }
+    50% {
+        transform: scale(1.15, 0.85);
+        -ms-transform: scale(1.15, 0.85);
+        -webkit-transform: scale(1.15, 0.85);
+        -moz-transform: scale(1.15, 0.85);
+    }
+    65% {
+        transform: scale(0.95, 1.05);
+        -ms-transform: scale(0.95, 1.05);
+        -webkit-transform: scale(0.95, 1.05);
+        -moz-transform: scale(0.95, 1.05);
+    }
+    75% {
+        transform: scale(1.05, 0.95);
+        -ms-transform: scale(1.05, 0.95);
+        -webkit-transform: scale(1.05, 0.95);
+        -moz-transform: scale(1.05, 0.95);
+    }
+    to {
+        transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+    }
+}
+
+
+

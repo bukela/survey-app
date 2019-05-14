@@ -1,0 +1,15 @@
+.modal-content {
+    text-align: center;
+    padding: 40px 30px 20px;
+    border-radius: 25px;
+    .modal-header {
+        border-bottom: none;
+        margin-bottom: 10px;
+        h4 {
+            font-size: 16px;
+        }
+    }
+    .button__red, .button__purple{
+        margin: 16px 8px;
+    }
+}

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+
+/* ----- BASE --------------------------------------------------------------- */
+
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    padding-bottom: 1px;
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+    @include font1;
+}
+
+a {
+
+    &:hover, &:focus, &:active {
+        text-decoration: none;
+        outline: none;
+        @include transition(all 0.2s ease-in-out);
+    }
+}
+
+select {
+    option[disabled] {
+        display: none;
+        outline: none;
+    }
+}
+main{
+    margin-bottom: 200px;
+}
+
+
+
+button {
+    border: none;
+    @include transition(all 0.2s ease-in-out);
+
+    &:hover, &:focus, &:active {
+        outline: none;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+textarea {
+    resize: none;
+    overflow-y: hidden;
+}
+
+p{
+    line-height: 35px;
+    
+}
+
+
+
+

@@ -1,0 +1,29 @@
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// BASE
+@import "base/variables";
+@import "base/mixins";
+@import "base/base";
+
+// LAYOUT
+@import "layout/header";
+@import "layout/footer";
+
+// COMPONENTS
+@import "components/buttons";
+@import "components/modal";
+@import "components/checkbox";
+@import "components/radio";
+@import "components/range_slider";
+@import "components/dropdown";
+
+// PAGES
+@import "pages/inner";
+@import "pages/new_patient";
+
+// EXTERNAL_CSS
+@import "external_css/datedropper";
