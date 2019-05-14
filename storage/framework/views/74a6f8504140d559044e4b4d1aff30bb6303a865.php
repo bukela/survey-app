@@ -43,7 +43,7 @@
         <?php $__currentLoopData = $doctor->patients; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $patient): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="row table__row">
                 <div class="col-md-7">
-                    <?php if(\App\Patient::find($patient->id)->surveys_completed->count() > 1 ): ?>
+                    <?php if(surveys_for_delete($patient->id)): ?>
                         <p class="gray__paragraph">Patiënt <?php echo e(++$key); ?></p>
                         <?php else: ?>
                         <p class="green__paragraph">Patiënt <?php echo e(++$key); ?></p>

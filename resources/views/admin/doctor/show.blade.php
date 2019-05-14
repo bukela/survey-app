@@ -45,7 +45,7 @@
         @foreach($doctor->patients as $key => $patient)
             <div class="row table__row">
                 <div class="col-md-7">
-                    @if(\App\Patient::find($patient->id)->surveys_completed->count() > 1 )
+                    @if(surveys_for_delete($patient->id))
                         <p class="gray__paragraph">Patiënt {{ ++$key }}</p>
                         @else
                         <p class="green__paragraph">Patiënt {{ ++$key }}</p>

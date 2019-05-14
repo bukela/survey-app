@@ -21,4 +21,6 @@ class Patient extends Model
     {
         return $this->hasMany(SurveyDoctorPatient::class);
     }
+
+
 }
