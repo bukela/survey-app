@@ -70,6 +70,15 @@ Route::post('/doctor/final-survey', 'Doctor\SurveyController@storeFinalSurvey')-
 
 Route::get('/export/csv/{survey_id?}/{role?}/{id?}', 'ExportController@csv')->name('export.csv');
 
+Route::get('/uuu', function() {
+    $user = App\User::find(48);
+    $no_export = App\SurveyDoctorPatient::where('survey_id', 2)->where('created_at','<','2019-02-02')->pluck('patient_id')->toArray();
+    $allPatientIds = $user->patients->pluck('id')->toArray();
+    dd($allPatientIds);
+    $patientIds = array_diff($allPatientIds, $no_export);
+    // dd($patientIds);
+});
+
 Auth::routes();
 
 ////// COMMENT OUT BEFORE COMMIT //////
