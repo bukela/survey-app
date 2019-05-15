@@ -31,13 +31,13 @@
                             <div class="hidden__question__convatec" style="display: none">
                         @endif
 
-                        @if ($question->id == 24 || $question->id == 24 || $question->id == 25 || $question->id == 26)
+                        @if ($question->id == 24 || $question->id == 25 || $question->id == 26)
                             <div class="hidden__question__aquacel" style="display: none">
                         @endif
 
-                        @if ($question->id == 6)
+                        {{-- @if ($question->id == 6)
                             <div class="inline-question">
-                        @endif
+                        @endif --}}
 
                         @include('doctor.survey.elements.' . $question->type, compact('question'))
 
@@ -45,9 +45,9 @@
                             @include('doctor.survey.elements.other', compact('question'))
                         @endif
 
-                        @if ($question->id == 7)
+                        {{-- @if ($question->id == 7)
                             </div>
-                        @endif
+                        @endif --}}
 
                         @if ($question->id == 11 || $question->id == 12)
                             </div>
@@ -77,8 +77,8 @@
 @section('script')
 <script>
     
-    $( document ).ready(function() {
+    {{-- $( document ).ready(function() {
         $('#toggle__3').append( $('#toggle__48') );
-});
+}); --}}
 </script>
 @endsection
