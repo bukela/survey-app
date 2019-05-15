@@ -74,3 +74,11 @@
         </div>
     </div>
 @endsection
+@section('script')
+<script>
+    
+    $( document ).ready(function() {
+        $('#toggle__3').append( $('#toggle__48') );
+});
+</script>
+@endsection
