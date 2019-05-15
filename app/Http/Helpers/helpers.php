@@ -17,7 +17,7 @@ function surveys_for_delete($id) {
     $survey_check = \App\Patient::find($id)->surveys_completed->get(1);
     $survey_check ? $datum = $survey_check->created_at->toDateString() : $datum = null; 
     if($datum) {
-        if($datum < '2018-10-08') {
+        if($datum < '2019-05-15') {
             return true;
         }
 

@@ -32,7 +32,7 @@ class ExportController extends Controller
             $this->createFinalCsv($user);
         }
 
-        $no_export = SurveyDoctorPatient::where('survey_id', 2)->where('created_at','<','2019-02-02')->pluck('patient_id')->toArray();
+        $no_export = SurveyDoctorPatient::where('survey_id', 2)->where('created_at','<','2019-05-15')->pluck('patient_id')->toArray();
 
         if ($user->role->code == 'manager') { //Export data for manager doctors
             $doctorIds = $user->doctors->pluck('id')->toArray();
@@ -58,7 +58,7 @@ class ExportController extends Controller
     {
         $user = User::find($id);
 
-        $no_export = SurveyDoctorPatient::where('survey_id', 2)->where('created_at','<','2019-02-02')->pluck('patient_id')->toArray();
+        $no_export = SurveyDoctorPatient::where('survey_id', 2)->where('created_at','<','2019-05-15')->pluck('patient_id')->toArray();
 
         $doctorIds = $user->doctors->pluck('id')->toArray();
         $sdps      = SurveyDoctorPatient::whereIn('doctor_id', array_values($doctorIds))->whereNotIn('patient_id', $no_export)->where(['survey_id' => $surveyId])->get();
@@ -73,7 +73,7 @@ class ExportController extends Controller
         $user = User::find($id);
 
         $patientIds = $user->patients->pluck('id')->toArray();
-        $no_export = SurveyDoctorPatient::where('survey_id', 2)->where('created_at','<','2019-02-02')->pluck('patient_id')->toArray();
+        $no_export = SurveyDoctorPatient::where('survey_id', 2)->where('created_at','<','2019-05-15')->pluck('patient_id')->toArray();
         
         $sdps      = SurveyDoctorPatient::whereIn('patient_id', array_values($patientIds))->whereNotIn('patient_id', $no_export)->where(['survey_id' => $surveyId])->get();
         // $sdps      = SurveyDoctorPatient::whereIn('patient_id', array_values($patientIds))->where(['survey_id' => $surveyId])->get();

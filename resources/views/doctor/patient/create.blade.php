@@ -26,7 +26,7 @@
 
                 <div class="input__block">
                     <div class="text-wrapper">
-                        <input name="name" class="input" type="text" placeholder="Naam (Alleen voor u zichtbaar)" id="naam" required value="{{ old('name') }}" />
+                        <input name="name" class="input" type="text" placeholder="Naam(Alleen voor u zichtbaar)" id="naam" required value="{{ old('name') }}" />
                         <label for="naam">Naam</label> @if ($errors->has('name'))
                         <p class="text-danger">{{ $errors->first('name') }}</p>
                         @endif

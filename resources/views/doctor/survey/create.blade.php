@@ -16,6 +16,7 @@
                     <input type="hidden" name="doctor_id" value="{{ $doctor->id }}">
                     <input type="hidden" name="patient_id" value="{{ $patient->id }}">
                     <input type="hidden" name="survey_id" value="{{ $survey }}">
+
                     @foreach($questions as $question)
 
                         @if ($question->id == 11 || $question->id == 12)

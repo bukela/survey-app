@@ -44,7 +44,8 @@
                 </div>
                 <div class="col-md-5">
                     <div class="col-md-6 col-md-offset-0 col-sm-4 col-sm-offset-4 col-xs-11 col-xs-offset-1 enquete__text">
-                        @if ($survey1 = \App\SurveyDoctorPatient::where(['survey_id' => 1, 'doctor_id' => auth()->user()->id, 'patient_id' => $patient->id])->first())
+                        @if ($survey1 = \App\SurveyDoctorPatient::where(['survey_id' => 1, 'patient_id' => $patient->id])->first())
+                        {{-- @if ($survey1 = \App\SurveyDoctorPatient::where(['survey_id' => 1, 'doctor_id' => auth()->user()->id, 'patient_id' => $patient->id])->first()) --}}
                             <img src="{{ asset('img/correct.svg') }}" alt="">
                             <p>afgerond op: {{ $survey1->created_at->format('d-m-Y') }}</p>
                         @else
@@ -59,7 +60,8 @@
                     </div>
 
                     <div class="col-md-6 col-md-offset-0 col-sm-4 col-sm-offset-4 col-xs-11 col-xs-offset-1 enquete__text">
-                        @if ($survey2 = \App\SurveyDoctorPatient::where(['survey_id' => 2, 'doctor_id' => auth()->user()->id, 'patient_id' => $patient->id])->first())
+                        @if ($survey2 = \App\SurveyDoctorPatient::where(['survey_id' => 2, 'patient_id' => $patient->id])->first())
+                        {{-- @if ($survey2 = \App\SurveyDoctorPatient::where(['survey_id' => 2, 'doctor_id' => auth()->user()->id, 'patient_id' => $patient->id])->first()) --}}
                             <img src="{{ asset('img/correct.svg') }}" alt="">
                             <p>afgerond op: {{ $survey2->created_at->format('d-m-Y') }}</p>
                         @else
