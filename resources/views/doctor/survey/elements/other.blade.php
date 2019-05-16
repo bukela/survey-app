@@ -1,10 +1,10 @@
-@if ($question->id == 29 || $question->id == 48 || $question->id == 3)
+@if ($question->id == 29 || $question->id == 48 || $question->id == 3 || $question->id == 49)
 <div class="cntr checkbox">
 @else
 <div class="radio">
 @endif
     {{--<input class="hidden-xs-up" id="question_{{ $question->id }}" type="radio" onclick="$('#other-{{ $question->id }}').show();" name="question_{{ $question->id }}">--}}
-    @if ($question->id == 29 || $question->id == 48 || $question->id == 3)
+    @if ($question->id == 29 || $question->id == 48 || $question->id == 3 || $question->id == 49)
         <input value="{{ $question->other_label ?: 'Anders' }}:" class="hidden-xs-up" id="question_{{ $question->id }}" type="checkbox" onchange="$('#other-{{ $question->id }}').toggle();" name="question_{{ $question->id }}_other">
         <label class="cbx" for="question_{{ $question->id }}"></label><label class="lbl" for="question_{{ $question->id }}">
             {{ $question->other_label ?: 'Anders' }}

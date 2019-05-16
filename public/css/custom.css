@@ -16,3 +16,40 @@
     float: right;
     box-shadow: -1px 3px 3px rgba(0, 0, 0, 0.3);
   }
+
+#toggle__14, #toggle__15, #toggle__16, #toggle__17, #toggle__18 {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+  }
+#toggle__14 p,
+#toggle__15 p,
+#toggle__16 p,
+#toggle__17 p,
+#toggle__18 p
+ {
+    flex: 0 0 100%;
+  }
+
+#toggle__14 div:first-of-type,
+#toggle__15 div:first-of-type,
+#toggle__16 div:first-of-type,
+#toggle__17 div:first-of-type,
+#toggle__18 div:first-of-type
+ {
+    margin-top: -5px;
+}
+
+#toggle__14 label,
+#toggle__15 label,
+#toggle__16 label,
+#toggle__17 label,
+#toggle__18 label
+ {
+    margin-left: 0px;
+    padding-left: 20px;
+  }
+
+.hidden__question__52 {
+  margin-left: 30px;
+}

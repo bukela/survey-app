@@ -19,7 +19,7 @@
 
                     @foreach($questions as $question)
 
-                        @if ($question->id == 11 || $question->id == 12)
+                        @if ($question->id == 11 || $question->id == 12 || $question->id == 52)
                             <div class="hidden__question__{{ $question->id }}" style="display: none">
                         @endif
 
@@ -49,7 +49,7 @@
                             </div>
                         @endif --}}
 
-                        @if ($question->id == 11 || $question->id == 12)
+                        @if ($question->id == 11 || $question->id == 12 || $question->id == 52)
                             </div>
                         @endif
 

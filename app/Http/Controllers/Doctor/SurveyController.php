@@ -18,7 +18,7 @@ class SurveyController extends Controller
 {
     public function create(User $doctor, Patient $patient, $survey)
     {
-        $questions = SurveyQuestion::where('survey_id', $survey)->get();
+        $questions = SurveyQuestion::where('survey_id', $survey)->orderBy('order', 'asc')->get();
 
         return view('doctor.survey.create', compact('doctor', 'patient', 'questions', 'survey'));
     }

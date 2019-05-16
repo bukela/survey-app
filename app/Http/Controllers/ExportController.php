@@ -36,18 +36,18 @@ class ExportController extends Controller
 
         if ($user->role->code == 'manager') { //Export data for manager doctors
             $doctorIds = $user->doctors->pluck('id')->toArray();
-            // $sdps      = SurveyDoctorPatient::whereIn('doctor_id', array_values($doctorIds))->where(['survey_id' => $surveyId])->get();
-            $sdps      = SurveyDoctorPatient::whereIn('doctor_id', array_values($doctorIds))->whereNotIn('patient_id', $no_export)->where(['survey_id' => $surveyId])->get();
+            $sdps      = SurveyDoctorPatient::whereIn('doctor_id', array_values($doctorIds))->where(['survey_id' => $surveyId])->get();
+            // $sdps      = SurveyDoctorPatient::whereIn('doctor_id', array_values($doctorIds))->whereNotIn('patient_id', $no_export)->where(['survey_id' => $surveyId])->get();
         } elseif ($user->role->code == 'doctor') { // Export for doctor patients
-            $allPatientIds = $user->patients->pluck('id')->toArray();
-            $patientIds = array_diff($allPatientIds, $no_export);
-            // $patientIds = $user->patients->pluck('id')->toArray();
-            // $sdps      = SurveyDoctorPatient::whereIn('patient_id', array_values($patientIds))->where(['survey_id' => $surveyId])->get();
-            $sdps      = SurveyDoctorPatient::whereIn('patient_id', array_values($patientIds))->whereNotIn('patient_id', $no_export)->where(['survey_id' => $surveyId])->get();
+            // $allPatientIds = $user->patients->pluck('id')->toArray();
+            // $patientIds = array_diff($allPatientIds, $no_export);
+            $patientIds = $user->patients->pluck('id')->toArray();
+            $sdps      = SurveyDoctorPatient::whereIn('patient_id', array_values($patientIds))->where(['survey_id' => $surveyId])->get();
+            // $sdps      = SurveyDoctorPatient::whereIn('patient_id', array_values($patientIds))->whereNotIn('patient_id', $no_export)->where(['survey_id' => $surveyId])->get();
         } else { // Export all data
 
-            // $sdps = SurveyDoctorPatient::where(['survey_id' => $surveyId])->get();
-            $sdps = SurveyDoctorPatient::where(['survey_id' => $surveyId])->whereNotIn('patient_id', $no_export)->get();
+            $sdps = SurveyDoctorPatient::where(['survey_id' => $surveyId])->get();
+            // $sdps = SurveyDoctorPatient::where(['survey_id' => $surveyId])->whereNotIn('patient_id', $no_export)->get();
         }
 
         $fileName = date('Y-m-d') . "_survey_{$surveyId}.csv";

@@ -12,6 +12,12 @@
                     if ($option == 'Chronische wond') $onclick = 'onclick="$(\'.hidden__question__12\').show(); $(\'.hidden__question__11\').hide();"';
                 @endphp
                 <input {!! $onclick  !!} id="question_{{ $question->id }}-{{ $key }}" name="question_{{ $question->id }}" type="radio" value="{{ $option }}" {{ $question->required ? ' required' : '' }}>
+            @elseif($question->id == 28)
+                @php
+                    if (str_contains($option, 'Secundair'))      $onclick = 'onclick="$(\'.hidden__question__52\').show()"';
+                    if (str_contains($option, 'Primair'))      $onclick = 'onclick="$(\'.hidden__question__52\').hide()"';
+                @endphp
+                <input {!! $onclick  !!} id="question_{{ $question->id }}-{{ $key }}" name="question_{{ $question->id }}" type="radio" value="{{ $option }}" {{ $question->required ? ' required' : '' }}>
             @elseif($question->id == 22)
                 @php
                     if (str_contains($option, 'AQUACEL'))  $onclick = 'onclick="$(\'.hidden__question__title\').show(); $(\'.hidden__question__aquacel\').show(); $(\'.hidden__question__convatec\').hide();"';
