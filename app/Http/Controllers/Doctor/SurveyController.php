@@ -18,7 +18,9 @@ class SurveyController extends Controller
 {
     public function create(User $doctor, Patient $patient, $survey)
     {
-        $questions = SurveyQuestion::where('survey_id', $survey)->orderBy('order', 'asc')->get();
+        // $questions = SurveyQuestion::where('survey_id', $survey)->orderBy('order', 'asc')->get();
+        // exclude question 21
+        $questions = SurveyQuestion::where('survey_id', $survey)->where('id', '!=', 21 )->orderBy('order', 'asc')->get();
 
         return view('doctor.survey.create', compact('doctor', 'patient', 'questions', 'survey'));
     }
@@ -27,12 +29,13 @@ class SurveyController extends Controller
     {
         // Save raw form data just in case... :)
         $this->storeRawData($request);
-
+        
         foreach ($request->except('_token', 'doctor_id', 'patient_id', 'survey_id') as $question => $answer) {
             $questionId = $this->getQuestionId($question);
 
             if ($question == 'question_30_text') continue;
             if ($question == 'question_' . $questionId . '_other') continue;
+            
 
             if ($questionId == 30) {
                 $answer = $request->get('question_30') . ': ' . $request->get('question_30_text');
@@ -69,7 +72,7 @@ class SurveyController extends Controller
             $notification             = new Notification();
             $notification->doctor_id  = $request->get('doctor_id');
             $notification->patient_id = $request->get('patient_id');
-            $notification->send_at    = (new Carbon())->addDays(10);
+            $notification->send_at    = (new Carbon())->addDays(21);
 
             $notification->save();
         }

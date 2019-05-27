@@ -15,7 +15,8 @@
                     </div>
                 </div>
                 <div class="col-md-12 text-center big__block">
-                    <p>10 dagen na de eerste enquête krijgt u een e-mail herinnering om de tweede enquête in te vullen.</p>
+                    {{-- <p>21 dagen na de eerste enquête krijgt u een e-mail herinnering om de tweede enquête in te vullen.</p> --}}
+                    <p>3 weken na de eerste enquête krijgt u een e-mail herinnering om de tweede enquête in te vullen.</p>
                 </div>
                 <a href="{{ route('doctor.survey.create', [
                                 'doctor' => $doctor,
