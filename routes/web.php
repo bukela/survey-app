@@ -45,6 +45,7 @@ Route::middleware(['auth', 'manager'])
     ->prefix('manager')
     ->group(function () {
         Route::get('/', 'DashboardController@index')->name('manager.home');
+        Route::get('/desc', 'DashboardController@index_desc');
 
         Route::get('/doctor/{doctor}', 'DoctorController@show')->name('manager.doctor.show');
         Route::delete('/doctor/{doctor}', 'DoctorController@destroy')->name('manager.doctor.delete');

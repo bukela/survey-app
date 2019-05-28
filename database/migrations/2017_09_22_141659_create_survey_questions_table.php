@@ -21,6 +21,7 @@ class CreateSurveyQuestionsTable extends Migration
             $table->boolean('other')->default(false);
             $table->string('text')->nullable();
             $table->longText('options')->nullable();
+            $table->integer('order')->nullable();
             $table->timestamps();
 
             $table->foreign('parent_id')->references('id')->on('survey_questions')->onDelete('cascade');

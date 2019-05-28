@@ -62,6 +62,7 @@ class ExportController extends Controller
 
         $doctorIds = $user->doctors->pluck('id')->toArray();
         $sdps      = SurveyDoctorPatient::whereIn('doctor_id', array_values($doctorIds))->whereNotIn('patient_id', $no_export)->where(['survey_id' => $surveyId])->get();
+        
         // $sdps      = SurveyDoctorPatient::whereIn('doctor_id', array_values($doctorIds))->where(['survey_id' => $surveyId])->get();
 
         $fileName = date('Y-m-d_') . $user->slug . "_survey_{$surveyId}.csv";
