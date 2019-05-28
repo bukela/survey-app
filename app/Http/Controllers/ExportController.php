@@ -32,7 +32,7 @@ class ExportController extends Controller
             $this->createFinalCsv($user);
         }
 
-        $no_export = SurveyDoctorPatient::where('survey_id', 2)->where('created_at','<','2019-05-15')->pluck('patient_id')->toArray();
+        $no_export = SurveyDoctorPatient::where('survey_id', 2)->pluck('patient_id')->toArray();
 
         if ($user->role->code == 'manager') { //Export data for manager doctors
             $doctorIds = $user->doctors->pluck('id')->toArray();

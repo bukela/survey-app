@@ -37,7 +37,7 @@
                     <h4>Enquête 1</h4>
                 </div>
                 <div class="col-md-6 enquete__heading">
-                    <h4>Enquête 2 <span>(na 10 dagen)</span></h4>
+                    <h4>Enquête 2 <span>(na 21 dagen)</span></h4>
                 </div>
             </div>
         </div>
